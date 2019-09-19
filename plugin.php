@@ -7,5 +7,5 @@
  */
 
  add_action('enqueue_block_editor_assets', function () {
- 	wp_enqueue_script('globus-gutenletter', plugins_url('/dist/index-min.js', __FILE__), [], filemtime(plugin_dir_path(__FILE__) . 'dist/index-min.js'), true);
+ 	wp_enqueue_script('gutenberg-blocks-recovery', plugins_url('/dist/index.js', __FILE__), [], filemtime(plugin_dir_path(__FILE__) . 'dist/index.js'), true);
  });

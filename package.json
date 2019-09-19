@@ -9,15 +9,14 @@
   "author": "Jonas Merhej",
   "license": "ISC",
   "dependencies": {
-    "@babel/preset-react": "^7.0.0",
     "babel-core": "^6.26.3",
     "gulp": "^4.0.2",
-    "gulp-minify": "^3.1.0"
+    "gulp-terser": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "gulp-babel": "^8.0.0",
-    "gulp-react": "^4.0.0"
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "gulp-babel": "^8.0.0"
   }
 }

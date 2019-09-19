@@ -1,11 +1,12 @@
 const gulp = require('gulp')
-	watch = require('gulp');
- 	react = require('gulp-react')
- 	minify = require('gulp-minify');
+	babel = require('gulp-babel')
+	terser = require('gulp-terser');
 
 gulp.task('build', () =>
 	gulp.src('index.js')
-		.pipe(react())
-		.pipe(minify())
+		.pipe(babel({
+			presets: ["@babel/preset-env", "@babel/preset-react"]
+		}))
+		.pipe(terser())
 		.pipe(gulp.dest('dist'))
 );

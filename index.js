@@ -1,24 +1,27 @@
-const { registerPlugin } = wp.plugins;
+/**
+ * Import wordpress dependencies
+ */
+const { __ } = wp.i18n;
+const { createBlock } = wp.blocks;
 const { PluginMoreMenuItem,} = wp.editPost;
+const { select, dispatch } = wp.data;
+const { registerPlugin } = wp.plugins;
 
 const ResolveBlocks = () => (
 	<PluginMoreMenuItem
 		icon="forms"
 		onClick={ () => {
-			brokenBlocks = $('.has-warning .block-editor-warning__secondary [aria-label="More options"]')
-			const bbl = brokenBlocks.length;
-			var n = 0;
-			while ( n < bbl ) {
-				brokenBlocks[n].click();
-				setTimeout( () => {
-					$('button:contains("Attempt Block Recovery")').click();
-				}, 3 );
-				n++
-			}
+			var blocks = select('core/block-editor').getBlocks();
+			blocks.map( ( block ) => {
+				if (!block.isValid) {
+					var newBlock = createBlock( block.name, block.attributes, block.innerblocks);
+					dispatch('core/block-editor').replaceBlock( block.clientId, newBlock );
+	   			}
+			} );
 		} }
 	>
-		Attempt All Blocks Recovery
+		{ __( 'Attempt All Blocks Recovery', 'gutenberg-blocks-recovery' ) }
 	</PluginMoreMenuItem>
 );
 
-registerPlugin( 'gutenberg-resolve-block', { render: ResolveBlocks } );
+registerPlugin( 'gutenberg-blocks-recovery', { render: ResolveBlocks } );
