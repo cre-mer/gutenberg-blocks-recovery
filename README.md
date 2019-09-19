@@ -1,4 +1,4 @@
-# A plugin that add a button to Gutenberg (wordpress) to recover the broken blocks
+# A plugin that adds a button to Gutenberg (wordpress) to recover the broken blocks
 
 ## How to use:
 * Go to the top right corner and click on the three points menu icon
