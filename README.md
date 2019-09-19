@@ -6,4 +6,4 @@
 ![recovery button screenshot](./seeme/img.png)
 
 ## Changelog
-###v2.0.0
+### v2.0.0
