@@ -1,6 +1,6 @@
 {
 	"name": "cre-mer/gutenberg-blocks-recovery",
-    "type": "plugin",
+    "type": "wordpress-plugin",
 	"description": "A WordPress Plugin To Attmept Blocks Recovery",
     "homepage": "https://github.com/cre-mer",
     "authors": [
@@ -12,7 +12,6 @@
         }
     ],
 	"require": {
-        "php": "^7.2",
         "another-vendor/package": "1.*"
     }
 }
