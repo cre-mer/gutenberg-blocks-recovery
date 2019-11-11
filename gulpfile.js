@@ -2,7 +2,7 @@ const gulp = require('gulp')
 	babel = require('gulp-babel')
 	terser = require('gulp-terser');
 
-gulp.task('build', () =>
+gulp.task('default', () =>
 	gulp.src('index.js')
 		.pipe(babel({
 			presets: ["@babel/preset-env", "@babel/preset-react"]
