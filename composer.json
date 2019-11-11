@@ -3,6 +3,10 @@
     "type": "wordpress-plugin",
 	"description": "A WordPress Plugin To Attmept Blocks Recovery",
     "homepage": "https://github.com/cre-mer",
+	"license": [
+	   "LGPL-2.1-only",
+	   "GPL-3.0-or-later"
+    ],
     "authors": [
         {
             "name": "Jonas Merhej",
